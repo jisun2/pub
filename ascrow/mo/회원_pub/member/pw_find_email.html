@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>비밀번호 찾기 _ 이메일로 인증</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- slick slider -->
+        <link rel="stylesheet" href="../assets/lib/slick/slick.css">
+        <link rel="stylesheet" href="../assets/css/style.css?v=1.0.6">
+
+        <script src="../assets/lib/jquery-2.2.4.min.js"></script>
+
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        
+        <div class="mo-wrap white">
+            <div class="page-header white no_border">
+                <div class="sz-wrap">
+                    <button type="button" class="back-btn"></button>
+                </div>
+            </div>
+            
+            <div id="container">
+                
+                <div class="member-container">
+                    <ul class="border_tab-list white clearfix">
+                        <li><button type="button" class="bt-btn big-font">아이디 찾기</button></li>
+                        <li class="active"><button type="button" class="bt-btn big-font">비밀번호 찾기</button></li>
+                    </ul>
+            
+                    <div class="member-wrap">
+                        <div class="input-wrap">
+                            <form action="">
+                                <div class="justify_box margin_b-25">
+                                    <p class="just_left radio-check">
+                                        <input type="radio" name="applyRadio" id="phoneApply" class="sz-custom_check">
+                                        <label for="phoneApply" class="sz-custom_label"></label>
+                                        <label for="phoneApply" class="sz-custom_text">휴대전화로 인증</label>
+                                    </p>
+                                    <p class="just_right radio-check">
+                                        <input type="radio" name="applyRadio" id="emailApply" class="sz-custom_check" checked>
+                                        <label for="emailApply" class="sz-custom_label"></label>
+                                        <label for="emailApply" class="sz-custom_text">이메일로 인증</label>
+                                    </p>
+                                </div>
+                
+                                <div class="margin_b-25">
+                                    <input type="text" class="text-input margin_b-5" placeholder="아이디">
+                                    <input type="text" class="text-input margin_b-5" placeholder="이름">
+                                    <input type="email" class="text-input margin_b-5" placeholder="회원 정보 내 이메일">
+                
+                                    <button type="submit" class="medium-btn margin_b-5 gray-btn">인증번호 받기</button>
+                
+                                    <div class="item_input-box">
+                                        <input type="number" class="text-input item-input" placeholder="인증 번호">
+                                        <span class="ii-item">03:00</span>
+                                    </div>
+                                </div>
+                
+                                <button type="submit" class="medium-btn black-btn">본인인증</button>
+                            </form>
+                        </div>  
+            
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- slick slider -->
+        <script src="../assets/lib/slick/slick.min.js"></script>
+        <script src="../assets/scripts/main.js?v=1.0.6"></script>
+
+        <script>
+            (function(){
+                function acAcco(ele, content) {
+                    $(ele).on( 'click touch', function(){
+                        $(this).toggleClass('active');
+                        $(this).parents('.agree-acco').find(content).slideToggle();
+                    });
+                }
+
+                acAcco('.ac-title .acco-button', '.ac-content');
+            })(jQuery);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>비밀번호 찾기 _ 휴대전화로 인증</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- slick slider -->
+        <link rel="stylesheet" href="../assets/lib/slick/slick.css">
+        <link rel="stylesheet" href="../assets/css/style.css?v=1.0.6">
+
+        <script src="../assets/lib/jquery-2.2.4.min.js"></script>
+
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        
+        <div class="mo-wrap white">
+            <div class="page-header white no_border">
+                <div class="sz-wrap">
+                    <button type="button" class="back-btn"></button>
+                </div>
+            </div>
+            
+            <div id="container">
+        
+                <div class="member-container">
+                    <ul class="border_tab-list white clearfix">
+                        <li><a href="../member/id_find.html" class="bt-btn big-font">아이디 찾기</a></li>
+                        <li class="active"><a href="../member/pw_find.html" class="bt-btn big-font">비밀번호 찾기</a></li>
+                    </ul>
+            
+                    <div class="member-wrap">
+                        <form action="">
+                            <div class="input-wrap">
+                                <div class="justify_box margin_b-25">
+                                    <p class="just_left radio-check">
+                                        <input type="radio" name="applyRadio" id="phoneApply" class="sz-custom_check" checked>
+                                        <label for="phoneApply" class="sz-custom_label"></label>
+                                        <label for="phoneApply" class="sz-custom_text">휴대전화로 인증</label>
+                                    </p>
+                                    <p class="just_right radio-check">
+                                        <input type="radio" name="applyRadio" id="emailApply" class="sz-custom_check">
+                                        <label for="emailApply" class="sz-custom_label"></label>
+                                        <label for="emailApply" class="sz-custom_text">이메일로 인증</label>
+                                    </p>
+                                </div>
+                
+                                <div class="margin_b-25">
+                                    <input type="text" class="text-input margin_b-5" placeholder="아이디">
+                                    <input type="text" class="text-input margin_b-5" placeholder="이름">
+                                    <div class="justify_box margin_b-5">
+                                        <div class="phone-first just_left">
+                                            <select class="sz-select_sl">
+                                                <option value="010">010</option>
+                                                <option value="011">011</option>
+                                                <option value="012">012</option>
+                                                <option value="018">018</option>
+                                            </select>
+                                            <ul class="sz-select_list">
+                                                <li class="selected">010</li>
+                                                <li>
+                                                    <ul class="sz-select_sub">
+                                                        <li>010</li>
+                                                        <li>011</li>
+                                                        <li>012</li>
+                                                        <li>018</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <input type="text" class="text-input phone-last just_right" value="8888-8584">
+                                    </div>
+                
+                                    <button type="submit" class="medium-btn margin_b-5 gray-btn">인증번호 받기</button>
+                
+                                    <div class="item_input-box">
+                                        <input type="number" class="text-input item-input" placeholder="인증 번호">
+                                        <span class="ii-item">03:00</span>
+                                    </div>
+                                </div>
+                
+                                <button type="submit" class="medium-btn black-btn">본인인증</button>
+                            </div>  
+                        </form>
+            
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        <!-- slick slider -->
+        <script src="../assets/lib/slick/slick.min.js"></script>
+        <script src="../assets/scripts/main.js?v=1.0.6"></script>
+
+        <script>
+            (function(){
+                function acAcco(ele, content) {
+                    $(ele).on( 'click touch', function(){
+                        $(this).toggleClass('active');
+                        $(this).parents('.agree-acco').find(content).slideToggle();
+                    });
+                }
+
+                acAcco('.ac-title .acco-button', '.ac-content');
+            })(jQuery);
+        </script>
+    </body>
+</html>

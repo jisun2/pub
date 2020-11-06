@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>힙합퍼 장바구니 메인</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../common/lib/jquery-2.2.4.min.js"></script>
+        <link rel="stylesheet" href="../common/css/common.css">
+        <link rel="stylesheet" href="assets/css/cart.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <div class="page-header white no_border">
+            <div class="sz-wrap justify_box">
+                <div class="just_left">
+                    <a href="#" class="back-btn"></a>
+                    <h2 class="page-title">쇼핑백</h2>
+                </div>
+            </div>
+        </div>
+
+        <div id="container">
+            <!-- .cart_pc-wrap 시작 -->
+            <div class="cart_pc-wrap">
+                <div class="cart_progress-wrap">
+                    <ul class="cart_progress-list">
+                        <li class="active"><span class="num">01</span>쇼핑백</li>
+                        <li><span class="num">02</span>주문결제</li>
+                        <li><span class="num">03</span>주문완료</li>
+                    </ul>
+                </div>
+                <div class="cart_pro-wrap">
+                    <div class="cart-left">
+                        <div class="cart-section cart_none-section">
+                            <!-- .cart-wrap 시작 -->
+                            <div class="cart-wrap cart_none_box">
+                                <div class="cart_none-wrap">
+                                    <div class="cnw-box">
+                                        <p class="cnw-text">쇼핑백에 담긴 상품이 없습니다.</p>
+                                        <a href="#" class="cnw-btn">쇼핑하러 가기</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-right">
+                        <div class="cart-total_table-wrap cart_none_total-wrap">
+                            <table>
+                              <caption class="blind">장바구니 총 예상 결제 금액</caption>
+                                <colgroup>
+                                    <col width="50%;">
+                                    <col width="50%;">
+                                </colgroup>
+
+                                <tbody>
+                                    <tr>
+                                        <td>총 상품 금액 (<span>3</span>)</td>
+                                        <td><span>0</span>원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>총 배송비</td>
+                                        <td>+ <span>0</span>원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>총 쿠폰 할인</td>
+                                        <td>- <span>0</span>원</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td>예상 결제 금액</td>
+                                        <td>
+                                            <span class="ctt-pay"><b class="ctt-pay-num">0</b>원</span>
+                                            <span class="ctt-bonus">예상 적립금 <span class="ctt-bonus-num">0M</span></span>
+                                            <span class="ctt-info">※ 쇼핑백에 담긴 상품은 30일 동안 보관됩니다.</span>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+
+                            <button type="submit" class="black-btn pc-only">구매하기</button>
+                        </div>
+                        <span class="ctt-info mo-ctt-info">※ 쇼핑백에 담긴 상품은 30일 동안 보관됩니다.</span>
+                    </div>
+                </div>
+            </div>
+            <!-- .cart_pc-wrap 끝 -->
+        </div>
+
+    </body>
+</html>

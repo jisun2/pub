@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>힙합퍼 스타일 가이드</title>
+	<link rel="stylesheet" href="https://use.typekit.net/yzy2fux.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&amp;subset=korean">
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" media="(max-width: 425px)" href="./css/mobile.css" />
+	<link rel="stylesheet" media="(min-width: 426px)" href="./css/pc.css" />
+	<link rel="stylesheet" href="./css/plugin.css">
+	<script src="./js/plugin.js"></script>
+</head>
+<body>
+	<ul>
+		<li><button type="button" onclick="openLayer(event,'#tempLayer1',this)">버튼 - 컨텐츠용(넓이 540px) 레이어열기</button></li>
+		<li><a href="#tempLayer1" onclick="openLayer(event,this)">링크 - 컨텐츠용(넓이 540px) 레이어열기</a></li>
+		<li><button type="button" onclick="openLayer(event,'#tempLayer2',this)">버튼 - 딤드(넓이 960px) 레이어열기</button></li>
+		<li><a href="#tempLayer2" onclick="openLayer(event,this)">링크 - 딤드(넓이 960px) 레이어열기</a></li>
+		<li><button type="button" onclick="openLayer(event,'#tempLayer3',this)">버튼 - 딤드(넓이 640px) 레이어열기</button></li>
+		<li><a href="#tempLayer3" onclick="openLayer(event,this)">링크 - 딤드(넓이 640px) 레이어열기</a></li>
+		<!-- showAlert('알럿이름','알럿내용',타입(0은 취소,확인 / 1은 확인),'콜백함수이름') 콜백함수는 하단 스크립트 참고, 콜백 함수가 없다면 확인 취소 버튼 클릭시 레이어 닫힘 -->
+		<li><button type="button" onclick="showAlert('tempLayer4','입력하신 아이디 혹은 비밀번호가 올바르지 않습니다.',0,'alertCallback')">버튼 - 알럿 레이어 열기(취소확인)</button></li>
+		<li><button type="button" onclick="showAlert('tempLayer5','입력하신 아이디 혹은 비밀번호가 올바르지 않습니다.',1)">버튼 - 알럿 레이어 열기(확인)</button></li>		
+		<li>
+			<div style="position:relative;margin-left:100px;width:50px;height:22px;">
+				<a href="#tempLayer6" data-type="tooltip" style="width:50px;height:22px;">툴팁보기</a>
+				<div class="tootip_layer lc_b hide" id="tempLayer6">
+					<p class="tc_5">구매확정을 해주셔야 마일리지 적립이 됩니다.</p>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<!-- <div class="alert_layer lc_b pos_center hide" id="tempLayer5">
+		<p class="message tc_3">입력하신 아이디 혹은 비밀번호가 올바르지 않습니다.</p>
+		<div class="btns lc_e5 clear">
+			<button type="button" class="btn_confirm lc_e5" onclick="closeLayer('#tempLayer5');">확인</button>
+		</div>
+	</div>
+	<div class="alert_layer lc_b pos_center hide" id="tempLayer4">
+		<p class="message tc_3">입력하신 아이디 혹은 비밀번호가 올바르지 않습니다.</p>
+		<div class="btns lc_e5 clear">
+			<button type="button" class="btn_cancel lc_e5 tc_8" onclick="closeLayer('#tempLayer4');">취소</button>
+			<button type="button" class="btn_confirm lc_e5" onclick="closeLayer('#tempLayer4');">확인</button>
+		</div>
+	</div> -->
+	<div class="dim_layer w640 hide">
+		<div class="wrap_layer lc_b" id="tempLayer3">
+			<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
+			<div class="layer_tit tc_3 lc_d0">타이틀타이틀TitleTitle</div>
+			<div class="layer_cont">
+				<p>사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다.</p>
+			</div>
+		</div>	
+	</div>
+	<div class="dim_layer hide">
+		<div class="wrap_layer lc_b" id="tempLayer2">
+			<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
+			<div class="layer_tit tc_3 lc_d0">타이틀타이틀TitleTitle</div>
+			<div class="layer_cont">
+				<p>사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다.</p>
+			</div>
+		</div>	
+	</div>
+	<div class="wrap_layer lc_b hide" id="tempLayer1">
+		<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
+		<div class="layer_tit tc_3 lc_d0">타이틀타이틀TitleTitle</div>
+		<div class="layer_cont">
+			<p>사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다. 사소한 불평은 미리 해버리는 편이 낫겠다. 으레 위인전이라 하면 평범한 개인이 ‘위인’이 되기까지의 과정을 출생부터 죽음까지 시간순으로 회고하는 것이 정석일 터. 하지만 어떤 부류의 사람은 위인이 될 수 있는가에 대한 논란은 배제하더라도, 기본적인 정보를 나열하는 것조차 힘들다.</p>
+		</div>
+	</div>
+	<hr>
+	<div class="site_step">
+		<span><a href="" class="step tc_b">SHOPPING BAG</a></span>
+		<span><a href="" class="step tc_b tc_3">SHOPPING BAG</a></span>
+		<span><a href="" class="step tc_b">SHOPPING BAG</a></span>
+	</div>
+	<hr>
+	<div>
+		<ul class="list_tab dis_f length2">
+			<li class="dis_if active"><strong class="tc_8 dis_f ai_c lc_b jc_c">항목ABC</strong></li>
+			<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">항목ABC<br>항목ABC</a></li>
+		</ul>
+	</div>
+	<div>
+		<ul class="list_tab dis_f length3">
+			<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">항목ABC</a></li>
+			<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">항목ABC</a></li>
+			<li class="dis_if active"><strong class="tc_8 dis_f ai_c lc_b jc_c">항목ABC<br>항목ABC</strong></li>
+		</ul>
+	</div>
+	<div>
+		<ul class="list_tab dis_f length4">
+			<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">항목ABC</a></li>
+			<li class="dis_if active"><strong class="tc_8 dis_f ai_c lc_b jc_c">항목ABC</strong></li>
+			<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">항목ABC<br>항목ABC</a></li>
+			<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">항목ABC</a></li>
+		</ul>
+	</div>
+	<div>
+		<ul class="list_tab dis_f length5">
+			<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">항목ABC</a></li>
+			<li class="dis_if active"><strong class="tc_8 dis_f ai_c lc_b jc_c">항목ABC</strong></li>
+			<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">항목ABC<br>항목ABC</a></li>
+			<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">항목ABC</a></li>
+			<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">항목ABC</a></li>
+		</ul>
+	</div>
+	<div>
+		<ul class="list_tab dis_f length6">
+			<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">항목ABC</a></li>
+			<li class="dis_if active"><strong class="tc_8 dis_f ai_c lc_b jc_c">항목ABC</strong></li>
+			<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">항목ABC<br>항목ABC</a></li>
+			<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">항목ABC</a></li>
+			<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">항목ABC</a></li>
+			<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">항목ABC</a></li>
+		</ul>
+	</div>
+	<div>
+		<ul class="list_tab dis_f length7">
+			<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">항목ABC</a></li>
+			<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">항목ABC</a></li>
+			<li class="dis_if active"><strong class="tc_8 dis_f ai_c lc_b jc_c">항목ABC</strong></li>
+			<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">항목ABC<br>항목ABC</a></li>
+			<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">항목ABC</a></li>
+			<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">항목ABC</a></li>
+			<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">항목ABC</a></li>
+		</ul>
+	</div>
+	<div>
+		<span class="input_text clear">
+			<input type="text" class="lc_d0 tc_3" placeholder="영문 또는 숫자 조합, 6자 이상">
+			<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+			<p class="error tc_poi">아이디를 입력해주세요.</p>
+		</span>
+		<span class="input_text clear">
+			<input type="text" class="lc_d0 tc_3">
+			<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+			<p class="error tc_poi">아이디를 입력해주세요.</p>
+		</span>
+		<span class="input_text large clear">
+			<input type="text" class="lc_d0 tc_3">
+			<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+			<p class="error tc_poi">아이디를 입력해주세요.</p>
+		</span>
+		<span class="input_text error clear">
+			<input type="text" class="lc_d0 tc_3" placeholder="영문 또는 숫자 조합, 6자 이상">
+			<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+			<p class="error tc_poi">아이디를 입력해주세요.</p>
+		</span>
+	</div>
+	<div>
+		<span class="input_select lc_d0 tc_b">
+			<select name="" id="" class="tc_3_h">
+				<option value="" selected>선택해주세요</option>
+				<option value="">블랙</option>
+				<option value="">화이트</option>
+				<option value="">레드</option>
+				<option value="">그레이</option>
+			</select>
+		</span>
+		<span class="input_select error lc_d0 tc_b">
+			<select name="" id="" class="tc_3_h">
+				<option value="" selected>선택해주세요</option>
+				<option value="">블랙</option>
+				<option value="">화이트</option>
+				<option value="">레드</option>
+				<option value="">그레이</option>
+			</select>
+			<p class="error tc_poi">아이디를 입력해주세요.</p>
+		</span>
+	</div>
+	<div>
+		<span class="wrap_radio">
+			<span class="input_radio">
+				<input type="radio" name="radio1" id="radio1_1"><label for="radio1_1" class="tc_3">가나다라ABCDabc</label>
+			</span>
+			<span class="input_radio">
+				<input type="radio" name="radio1" id="radio1_2"><label for="radio1_2" class="tc_3">가나다라ABCDabc</label>
+			</span>
+		</span>
+	</div>
+	<div>
+		<span class="wrap_checkbox">
+			<span class="input_checkbox">
+				<input type="checkbox" name="checkbox1" id="checkbox1_1"><label for="checkbox1_1" class="tc_3 spr_after">가나다라ABCDabc</label>
+			</span>
+			<span class="input_checkbox">
+				<input type="checkbox" name="checkbox1" id="checkbox1_2"><label for="checkbox1_2" class="tc_3 spr_after">가나다라ABCDabc</label>
+			</span>
+		</span>
+		<span class="input_checkbox large">
+			<input type="checkbox" name="checkbox1" id="checkbox2_1"><label for="checkbox2_1" class="tc_3 spr_after">가나다라ABCDabc</label>
+		</span>
+	</div>
+	<div>
+		<span class="input_textarea" style="width:100%">
+			<textarea name="" id="" class="lc_d0 tc_3" data-type="countlength" maxlength="300" placeholder="요청사항을 작성해 주세요."></textarea>
+			<p class="count tc_8"><span class="" data-type="showlength">0</span> / 300자</p>
+		</span>
+	</div>
+	<div>
+		<span class="input_number clear">
+			<button type="button" class="btn_minus lc_d0 pos_center_before" data-type="minus">빼기</button>
+			<input type="number" class="text_number lc_d0 tc_3" value="1" min="1">
+			<button type="button" class="btn_plus lc_d0 pos_center_before pos_center_after" data-type="plus">더하기</button>
+		</span>
+	</div>
+	<hr>
+	<section class="wrap_board">
+		<h4 class="tit tc_3">Q&amp;A</h4>
+		<!-- 모바일 UI 별도 -->
+		<ul class="sort dis_f on_w">
+			<li class="dis_if"><button type="button" class="tc_3">ALL <span>(129)</span></button></li>
+			<li class="dis_if"><button type="button">상품 문의 <span>(84)</span></button></li>
+			<li class="dis_if"><button type="button">재입고 문의 <span>(10)</span></button></li>
+			<li class="dis_if"><button type="button">사이즈 문의 <span>(5)</span></button></li>
+			<li class="dis_if"><button type="button">배송 문의 <span>(27)</span></button></li>
+			<li class="dis_if"><button type="button">기타 <span>(3)</span></button></li>
+		</ul>
+		<span class="input_select event_sort_m on_m">
+			<select name="" id="" class="tc_3_h" data-type="autowidth">
+				<option value="" selected="">ALL(129)</option>
+				<option value="">상품 문의(129)</option>
+				<option value="">재입고 문의(129)</option>
+				<option value="">사이즈 문의(129)</option>
+				<option value="">배송 문의(129)</option>
+				<option value="">기타(129)</option>
+			</select>
+		</span>
+		<div class="group lc_1">
+			<div class="item lc_e5"><!-- 열릴때는 class에 view 추가 -->
+				<dl class="info">
+					<dt class="s_out">상태</dt>
+					<dd class="flag new"><span class="s_out">새글</span></dd>
+					<dt class="s_out">구분</dt>
+					<dd class="category tc_b">상품문의</dd>
+					<dt class="s_out">작성자</dt>
+					<dd class="writer tc_5">yj2****</dd>
+					<dt class="s_out">작성일</dt>
+					<dd class="date tc_5">2018.12.11</dd>
+				</dl>
+				<div class="que tc_5 clear">
+					<span class="s_out">문의내용 : </span>
+					<div class="cont clear">
+						<p>안녕하세요? 주문했는데 배송은 보통 얼마나 걸리나요?안녕하세요? 주문했는데 배송은 보통 얼마나 걸리나요?<br>
+						안녕하세요? 주문했는데 배송은 보통 얼마나 걸리나요?</p>
+						<button type="button" class="view" data-type="qnaview"><span class="s_out">답변보기</span></button>
+					</div>
+				</div>
+			</div>
+			<div class="item lc_e5">
+				<dl class="info">
+					<dt class="s_out">상태</dt>
+					<dd class="flag no tc_b"><span class="s_out">미답변</span></dd>
+					<dt class="s_out">구분</dt>
+					<dd class="category tc_b">상품문의</dd>
+					<dt class="s_out">작성자</dt>
+					<dd class="writer tc_5">yj2****</dd>
+					<dt class="s_out">작성일</dt>
+					<dd class="date tc_5">2018.12.11</dd>
+				</dl>
+				<div class="que tc_5 clear">
+					<span class="s_out">문의내용 : </span>
+					<div class="cont clear">
+						<p class="secret spr_after">비밀글 입니다.</p>
+						<!-- 비밀글에는 data-type="qnaview secret" 추가, 비밀글 관련 코드를 실행 한 후 qnaViewFn(this) 추가, this는 button 버튼 -->
+						<button type="button" class="view" data-type="qnaview secret" onclick="qnaViewFn(this)"><span class="s_out">상세보기</span></button>
+					</div>
+				</div>
+				<div class="ans secret">
+					<form action="">
+						<fieldset>
+							<legend>비밀번호 입력</legend>
+							<span class="input_text clear">
+								<input type="password" class="lc_d0 tc_3" placeholder="글 작성 시 등록한 비밀번호">
+								<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+								<p class="error tc_poi">비밀번호가 틀렸습니다.</p>
+							</span>
+							<button type="button" class="btn_confirm bg_f">확인</button>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<div class="item lc_e5">
+				<dl class="info">
+					<dt class="s_out">상태</dt>
+					<dd class="flag no tc_b"><span class="s_out">미답변</span></dd>
+					<dt class="s_out">구분</dt>
+					<dd class="category tc_b">상품문의</dd>
+					<dt class="s_out">작성자</dt>
+					<dd class="writer tc_5">yj2****</dd>
+					<dt class="s_out">작성일</dt>
+					<dd class="date tc_5">2018.12.11</dd>
+				</dl>
+				<div class="que tc_5 clear">
+					<span class="s_out">문의내용 : </span>
+					<div class="cont clear">
+						<p>안녕하세요.<br>
+						지난주 토요일에 다른아이디로2개 이걸로 1개 총 3개 주문해서 다른아이디로 주문한 와인 100, 차콜 95는 받았는데,
+						95보다 더 먼저 주문한 차콜 105는 언제 오는건가요?
+						지난주 토요일에 다른아이디로2개 이걸로 1개 총 3개 주문해서 다른아이디로 주문한 와인 100, 차콜 95는 받았는데,
+						95보다 더 먼저 주문한 차콜 105는 언제 오는건가요?
+						지난주 토요일에 다른아이디로2개 이걸로 1개 총 3개 주문해서 다른아이디로 주문한 와인 100, 차콜 95는 받았는데,<br>
+						95보다 더 먼저 주문한 차콜 105는 언제 오는건가요?<br>
+						지난주 토요일에 다른아이디로2개 이걸로 1개 총 3개 주문해서 다른아이디로 주문한 와인 100, 차콜 95는 받았는데,<br>
+						95보다 더 먼저 주문한 차콜 105는 언제 오는건가요?</p>
+						<button type="button" class="view" data-type="qnaview"><span class="s_out">답변보기</span></button>
+					</div>
+					<div class="admin">
+						<button type="button" class="text_link">수정</button>
+						<button type="button" class="text_link">삭제</button>
+					</div>
+				</div>
+			</div>
+			<div class="item lc_e5">
+				<dl class="info">
+					<dt class="s_out">상태</dt>
+					<dd class="flag yes tc_3"><span class="s_out">답변 완료</span></dd>
+					<dt class="s_out">구분</dt>
+					<dd class="category tc_b">상품문의</dd>
+					<dt class="s_out">작성자</dt>
+					<dd class="writer tc_5">yj2****</dd>
+					<dt class="s_out">작성일</dt>
+					<dd class="date tc_5">2018.12.11</dd>
+				</dl>
+				<div class="que tc_5 clear">
+					<span class="s_out">문의내용 : </span>
+					<div class="cont clear">
+						<p>안녕하세요.<br>
+						지난주 토요일에 다른아이디로2개 이걸로 1개 총 3개 주문해서 다른아이디로 주문한 와인 100, 차콜 95는 받았는데,
+						95보다 더 먼저 주문한 차콜 105는 언제 오는건가요?
+						지난주 토요일에 다른아이디로2개 이걸로 1개 총 3개 주문해서 다른아이디로 주문한 와인 100, 차콜 95는 받았는데,
+						95보다 더 먼저 주문한 차콜 105는 언제 오는건가요?
+						지난주 토요일에 다른아이디로2개 이걸로 1개 총 3개 주문해서 다른아이디로 주문한 와인 100, 차콜 95는 받았는데,<br>
+						95보다 더 먼저 주문한 차콜 105는 언제 오는건가요?<br>
+						지난주 토요일에 다른아이디로2개 이걸로 1개 총 3개 주문해서 다른아이디로 주문한 와인 100, 차콜 95는 받았는데,<br>
+						95보다 더 먼저 주문한 차콜 105는 언제 오는건가요?</p>
+						<button type="button" class="view" data-type="qnaview"><span class="s_out">답변보기</span></button>
+					</div>
+					<div class="admin">
+						<button type="button" class="text_link">수정</button>
+						<button type="button" class="text_link">삭제</button>
+					</div>
+				</div>
+				<div class="ans">
+					<span class="s_out">답변내용 : </span>
+					<p>안녕하세요. 힙합퍼 몽벨입니다.<br>
+					고객님께서 주문하신 상품 오늘 출고완료됐습니다.<br>
+					오래 기다려 주셔서 감사합니다.<br>
+					오늘도 즐거운 하루 되십시요. 고맙습니다.</p>
+				</div>
+			</div>
+			<div class="item lc_e5">
+				<dl class="info">
+					<dt class="s_out">상태</dt>
+					<dd class="flag yes tc_3"><span class="s_out">답변 완료</span></dd>
+					<dt class="s_out">구분</dt>
+					<dd class="category tc_b">재입고문의</dd>
+					<dt class="s_out">작성자</dt>
+					<dd class="writer tc_5">yj2****</dd>
+					<dt class="s_out">작성일</dt>
+					<dd class="date tc_5">2018.12.11</dd>
+				</dl>
+				<div class="que tc_5 clear">
+					<span class="s_out">문의내용 : </span>
+					<div class="cont clear">
+						<p>안녕하세요.<br>
+						지난주 토요일에 다른아이디로2개 이걸로 1개 총 3개 주문해서 다른아이디로 주문한 와인 100, 차콜 95는 받았는데,
+						95보다 더 먼저 주문한 차콜 105는 언제 오는건가요?
+						지난주 토요일에 다른아이디로2개 이걸로 1개 총 3개 주문해서 다른아이디로 주문한 와인 100, 차콜 95는 받았는데,
+						95보다 더 먼저 주문한 차콜 105는 언제 오는건가요?
+						지난주 토요일에 다른아이디로2개 이걸로 1개 총 3개 주문해서 다른아이디로 주문한 와인 100, 차콜 95는 받았는데,<br>
+						95보다 더 먼저 주문한 차콜 105는 언제 오는건가요?<br>
+						지난주 토요일에 다른아이디로2개 이걸로 1개 총 3개 주문해서 다른아이디로 주문한 와인 100, 차콜 95는 받았는데,<br>
+						95보다 더 먼저 주문한 차콜 105는 언제 오는건가요?</p>
+						<button type="button" class="view" data-type="qnaview"><span class="s_out">답변보기</span></button>
+					</div>
+				</div>
+				<div class="ans">
+					<span class="s_out">답변내용 : </span>
+					<p>안녕하세요. 힙합퍼 몽벨입니다.<br>
+					고객님께서 주문하신 상품 오늘 출고완료됐습니다.<br>
+					오래 기다려 주셔서 감사합니다.<br>
+					오늘도 즐거운 하루 되십시요. 고맙습니다.</p>
+				</div>
+			</div>
+		</div>
+		<div class="pages">
+			<em class="link">1</em>
+			<a href="" class="link">2</a>
+			<a href="" class="link">3</a>
+			<a href="" class="link">4</a>
+			<a href="" class="link">5</a>
+			<a href="" class="link">6</a>
+			<a href="" class="link">7</a>
+			<a href="" class="link">8</a>
+			<a href="" class="link">9</a>
+			<a href="" class="link">10</a>
+			<a href="" class="link last">132</a>
+			<a href="" class="btn_arr prev spr_before disabled"><span class="s_out">이전</span></a>
+			<a href="" class="btn_arr next spr_before"><span class="s_out">다음</span></a>
+		</div>
+		<a href="" class="btn_write dark large">Q&amp;A작성</a>
+	</section>
+	<hr>
+	<ul class="list_product mini vertical">
+		<li>
+			<div class="link">
+				<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+				<a href="" class="brand ellipsis tc_3">베이직 MAJESTIC</a>
+				<a href="" class="name ellipsis">베이직 ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+				<em class="flag out">SOLD OUT</em>
+				<div class="price small tc_3">
+					<span class="sale tc_poi">5%</span>
+					<strong class="now tc_3">51,800</strong>
+					<del class="origin tc_b">69,000</del>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="link">
+				<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+				<a href="" class="brand ellipsis tc_3">베이직 MAJESTIC</a>
+				<a href="" class="name ellipsis">베이직 ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+				<div class="price small tc_3">
+					<span class="sale tc_poi">5%</span>
+					<strong class="now tc_3">51,800</strong>
+					<del class="origin tc_b">69,000</del>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="link">
+				<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+				<a href="" class="brand ellipsis tc_3">베이직 MAJESTIC</a>
+				<a href="" class="name ellipsis">베이직 ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+				<div class="price small tc_3">
+					<span class="sale tc_poi">5%</span>
+					<strong class="now tc_3">51,800</strong>
+					<del class="origin tc_b">69,000</del>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<hr>
+	<ul class="list_product small vertical">
+		<li>
+			<div class="link">
+				<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+				<span class="brand ellipsis tc_3">베이직 MAJESTIC</span>
+				<a href="" class="name ellipsis">베이직 ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+				<div class="price small tc_3">
+					<strong class="now tc_3">51,800</strong>
+					<del class="origin tc_b">69,000</del>
+				</div>
+				<div class="option dis_f tc_8 ai_e">
+					<ul>
+						<li>상의 : M / BROWN  |  하의 : 30 / NAVY  |  2개</li>
+					</ul>
+					<a href="" class="edit">수정</a>
+					<button type="button" class="alram">재입고 알림 신청</button>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<hr>
+	<ul class="list_product small vertical">
+		<li>
+			<div class="link">
+				<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+				<a href="" class="brand ellipsis tc_3">베이직 MAJESTIC</a>
+				<a href="" class="name ellipsis">베이직 ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+				<em class="flag out">SOLD OUT</em>
+				<div class="price tc_3">
+					<span class="sale tc_poi">5%</span>
+					<strong class="now tc_3">51,800</strong>
+					<del class="origin tc_b">69,000</del>
+				</div>
+				<div class="flags clear">
+					<span class="flag tag tc_8">해외배송</span>
+					<span class="flag tag tc_8">베스트</span>
+					<span class="flag tag tc_8">쿠폰</span>
+				</div>
+			</div>
+			<div class="func">
+				<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+				<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+			</div>
+		</li>
+		<li>
+			<div class="link">
+				<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+				<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+				<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+				<div class="price tc_3">
+					<span class="sale tc_poi">5%</span>
+					<strong class="now tc_3">51,800</strong>
+					<del class="origin tc_b">69,000</del>
+				</div>
+				<div class="flags clear">
+					<span class="flag tag tc_8">해외배송</span>
+					<span class="flag tag tc_8">베스트</span>
+					<span class="flag tag tc_8">쿠폰</span>
+				</div>
+			</div>
+			<div class="func">
+				<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+				<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+			</div>
+		</li>
+		<li>
+			<div class="link">
+				<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+				<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+				<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+				<div class="price tc_3">
+					<span class="sale tc_poi">5%</span>
+					<strong class="now tc_3">51,800</strong>
+					<del class="origin tc_b">69,000</del>
+				</div>
+				<div class="flags clear">
+					<span class="flag tag tc_8">해외배송</span>
+					<span class="flag tag tc_8">베스트</span>
+					<span class="flag tag tc_8">쿠폰</span>
+				</div>
+			</div>
+			<div class="func">
+				<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+				<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+			</div>
+		</li>
+	</ul>
+	<hr>
+	<ul class="list_product small">
+		<li>
+			<div class="link">
+				<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+				<a href="" class="brand ellipsis tc_3">베이직 MAJESTIC</a>
+				<a href="" class="name ellipsis">베이직 ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+				<em class="flag out">SOLD OUT</em>
+				<div class="price tc_3">
+					<span class="sale tc_poi">5%</span>
+					<strong class="now tc_3">51,800</strong>
+					<del class="origin tc_b">69,000</del>
+				</div>
+				<div class="flags clear">
+					<span class="flag tag tc_8">해외배송</span>
+					<span class="flag tag tc_8">베스트</span>
+					<span class="flag tag tc_8">쿠폰</span>
+				</div>
+			</div>
+			<div class="func">
+				<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+				<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+			</div>
+		</li>
+		<li>
+			<div class="link">
+				<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+				<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+				<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+				<div class="price tc_3">
+					<span class="sale tc_poi">5%</span>
+					<strong class="now tc_3">51,800</strong>
+					<del class="origin tc_b">69,000</del>
+				</div>
+				<div class="flags clear">
+					<span class="flag tag tc_8">해외배송</span>
+					<span class="flag tag tc_8">베스트</span>
+					<span class="flag tag tc_8">쿠폰</span>
+				</div>
+			</div>
+			<div class="func">
+				<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+				<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+			</div>
+		</li>
+		<li>
+			<div class="link">
+				<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+				<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+				<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+				<div class="price tc_3">
+					<span class="sale tc_poi">5%</span>
+					<strong class="now tc_3">51,800</strong>
+					<del class="origin tc_b">69,000</del>
+				</div>
+				<div class="flags clear">
+					<span class="flag tag tc_8">해외배송</span>
+					<span class="flag tag tc_8">베스트</span>
+					<span class="flag tag tc_8">쿠폰</span>
+				</div>
+			</div>
+			<div class="func">
+				<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+				<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+			</div>
+		</li>
+		<li>
+			<div class="link">
+				<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+				<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+				<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+				<div class="price tc_3">
+					<span class="sale tc_poi">5%</span>
+					<strong class="now tc_3">51,800</strong>
+					<del class="origin tc_b">69,000</del>
+				</div>
+				<div class="flags clear">
+					<span class="flag tag tc_8">해외배송</span>
+					<span class="flag tag tc_8">베스트</span>
+					<span class="flag tag tc_8">쿠폰</span>
+				</div>
+			</div>
+			<div class="func">
+				<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+				<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+			</div>
+		</li>
+		<li>
+			<div class="link">
+				<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+				<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+				<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+				<div class="price tc_3">
+					<span class="sale tc_poi">5%</span>
+					<strong class="now tc_3">51,800</strong>
+					<del class="origin tc_b">69,000</del>
+				</div>
+				<div class="flags clear">
+					<span class="flag tag tc_8">해외배송</span>
+					<span class="flag tag tc_8">베스트</span>
+					<span class="flag tag tc_8">쿠폰</span>
+				</div>
+			</div>
+			<div class="func">
+				<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+				<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+			</div>
+		</li>
+		<li>
+			<div class="link">
+				<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+				<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+				<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+				<div class="price tc_3">
+					<span class="sale tc_poi">5%</span>
+					<strong class="now tc_3">51,800</strong>
+					<del class="origin tc_b">69,000</del>
+				</div>
+				<div class="flags clear">
+					<span class="flag tag tc_8">해외배송</span>
+					<span class="flag tag tc_8">베스트</span>
+					<span class="flag tag tc_8">쿠폰</span>
+				</div>
+			</div>
+			<div class="func">
+				<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+				<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+			</div>
+		</li>
+	</ul>
+	<hr>
+	<section class="wrap_listproduct miw1180">
+		<div class="inner">
+			<strong class="tit tc_3">NEW</strong>
+			<ul class="list_product fix5">
+				<li>
+					<div class="link">
+						<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+						<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+						<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트) ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트) ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+						<div class="set_pos"><em class="flag out">SOLD OUT</em></div>
+						<div class="price tc_3">
+							<span class="sale tc_poi">5%</span>
+							<strong class="now tc_3">51,800</strong>
+							<del class="origin tc_b">69,000</del>
+						</div>
+						<div class="flags clear">
+							<span class="flag tag tc_8">해외배송</span>
+							<span class="flag tag tc_8">베스트</span>
+							<span class="flag tag tc_8">쿠폰</span>
+						</div>
+					</div>
+					<div class="set_pos">
+						<div class="func">
+							<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+							<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="link">
+						<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+						<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+						<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+						<!-- <div class="set_pos"><em class="flag out">SOLD OUT</em></div> -->
+						<div class="price tc_3">
+							<span class="sale tc_poi">5%</span>
+							<strong class="now tc_3">51,800</strong>
+							<del class="origin tc_b">69,000</del>
+						</div>
+						<div class="flags clear">
+							<span class="flag tag tc_8">해외배송</span>
+							<span class="flag tag tc_8">베스트</span>
+							<span class="flag tag tc_8">쿠폰</span>
+						</div>
+					</div>
+					<div class="set_pos">
+						<div class="func">
+							<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+							<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="link">
+						<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+						<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+						<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+						<!-- <div class="set_pos"><em class="flag out">SOLD OUT</em></div> -->
+						<div class="price tc_3">
+							<span class="sale tc_poi">5%</span>
+							<strong class="now tc_3">51,800</strong>
+							<del class="origin tc_b">69,000</del>
+						</div>
+						<div class="flags clear">
+							<span class="flag tag tc_8">해외배송</span>
+							<span class="flag tag tc_8">베스트</span>
+							<span class="flag tag tc_8">쿠폰</span>
+						</div>
+					</div>
+					<div class="set_pos">
+						<div class="func">
+							<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+							<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="link">
+						<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+						<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+						<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+						<!-- <div class="set_pos"><em class="flag out">SOLD OUT</em></div> -->
+						<div class="price tc_3">
+							<span class="sale tc_poi">5%</span>
+							<strong class="now tc_3">51,800</strong>
+							<del class="origin tc_b">69,000</del>
+						</div>
+						<div class="flags clear">
+							<span class="flag tag tc_8">해외배송</span>
+							<span class="flag tag tc_8">베스트</span>
+							<span class="flag tag tc_8">쿠폰</span>
+						</div>
+					</div>
+					<div class="set_pos">
+						<div class="func">
+							<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+							<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="link">
+						<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+						<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+						<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+						<!-- <div class="set_pos"><em class="flag out">SOLD OUT</em></div> -->
+						<div class="price tc_3">
+							<span class="sale tc_poi">5%</span>
+							<strong class="now tc_3">51,800</strong>
+							<del class="origin tc_b">69,000</del>
+						</div>
+						<div class="flags clear">
+							<span class="flag tag tc_8">해외배송</span>
+							<span class="flag tag tc_8">베스트</span>
+							<span class="flag tag tc_8">쿠폰</span>
+						</div>
+					</div>
+					<div class="set_pos">
+						<div class="func">
+							<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+							<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="link">
+						<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+						<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+						<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트) ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트) ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+						<div class="set_pos"><em class="flag out">SOLD OUT</em></div>
+						<div class="price tc_3">
+							<span class="sale tc_poi">5%</span>
+							<strong class="now tc_3">51,800</strong>
+							<del class="origin tc_b">69,000</del>
+						</div>
+						<div class="flags clear">
+							<span class="flag tag tc_8">해외배송</span>
+							<span class="flag tag tc_8">베스트</span>
+							<span class="flag tag tc_8">쿠폰</span>
+						</div>
+					</div>
+					<div class="set_pos">
+						<div class="func">
+							<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+							<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="link">
+						<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+						<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+						<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+						<!-- <div class="set_pos"><em class="flag out">SOLD OUT</em></div> -->
+						<div class="price tc_3">
+							<span class="sale tc_poi">5%</span>
+							<strong class="now tc_3">51,800</strong>
+							<del class="origin tc_b">69,000</del>
+						</div>
+						<div class="flags clear">
+							<span class="flag tag tc_8">해외배송</span>
+							<span class="flag tag tc_8">베스트</span>
+							<span class="flag tag tc_8">쿠폰</span>
+						</div>
+					</div>
+					<div class="set_pos">
+						<div class="func">
+							<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+							<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="link">
+						<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+						<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+						<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+						<!-- <div class="set_pos"><em class="flag out">SOLD OUT</em></div> -->
+						<div class="price tc_3">
+							<span class="sale tc_poi">5%</span>
+							<strong class="now tc_3">51,800</strong>
+							<del class="origin tc_b">69,000</del>
+						</div>
+						<div class="flags clear">
+							<span class="flag tag tc_8">해외배송</span>
+							<span class="flag tag tc_8">베스트</span>
+							<span class="flag tag tc_8">쿠폰</span>
+						</div>
+					</div>
+					<div class="set_pos">
+						<div class="func">
+							<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+							<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="link">
+						<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+						<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+						<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+						<!-- <div class="set_pos"><em class="flag out">SOLD OUT</em></div> -->
+						<div class="price tc_3">
+							<span class="sale tc_poi">5%</span>
+							<strong class="now tc_3">51,800</strong>
+							<del class="origin tc_b">69,000</del>
+						</div>
+						<div class="flags clear">
+							<span class="flag tag tc_8">해외배송</span>
+							<span class="flag tag tc_8">베스트</span>
+							<span class="flag tag tc_8">쿠폰</span>
+						</div>
+					</div>
+					<div class="set_pos">
+						<div class="func">
+							<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+							<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="link">
+						<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+						<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+						<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+						<!-- <div class="set_pos"><em class="flag out">SOLD OUT</em></div> -->
+						<div class="price tc_3">
+							<span class="sale tc_poi">5%</span>
+							<strong class="now tc_3">51,800</strong>
+							<del class="origin tc_b">69,000</del>
+						</div>
+						<div class="flags clear">
+							<span class="flag tag tc_8">해외배송</span>
+							<span class="flag tag tc_8">베스트</span>
+							<span class="flag tag tc_8">쿠폰</span>
+						</div>
+					</div>
+					<div class="set_pos">
+						<div class="func">
+							<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+							<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<button type="button" class="btn_more large">더 보기</button>
+		</div>
+	</section>
+	<hr>
+	<nav class="lnb" id="lnb"><!-- 흰색은 class에 white 추가 -->
+		<h2 class="tit_lnb">ABC</h2>
+		<ul class="list_lnb lc_3 clear">
+			<li><a href="" class="tc_poi">티셔츠</a>
+				<ul class="dep2 clear">
+					<li><a href="" class="tc_poi">반팔티 (570)</a></li>
+					<li><a href="">긴팔티 (84)</a></li>
+					<li><a href="">민소매 (26)</a></li>
+				</ul>
+			</li>
+			<li><a href="">맨투맨</a></li>
+			<li><a href="">후디</a></li>
+			<li><a href="">아우터</a></li>
+			<li><a href="">바지</a></li>
+			<li><a href="">니트</a></li>
+			<li><a href="">원피스/스커트</a></li>
+			<li><a href="">셔츠/블라우스</a></li>
+			<li><a href="">이너웨어</a></li>
+			<li><a href="">두줄 메뉴가 들어갈 경우<br>두줄 메뉴가 들어갈 경우</a></li>
+		</ul>
+	</nav>
+	<hr>
+	<ul class="list_product">
+		<li>
+			<div class="link">
+				<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+				<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+				<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트) ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트) ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+				<div class="set_pos"><em class="flag out">SOLD OUT</em></div>
+				<div class="price tc_3">
+					<span class="sale tc_poi">5%</span>
+					<strong class="now tc_3">51,800</strong>
+					<del class="origin tc_b">69,000</del>
+				</div>
+				<div class="flags clear">
+					<span class="flag tag tc_8">해외배송</span>
+					<span class="flag tag tc_8">베스트</span>
+					<span class="flag tag tc_8">쿠폰</span>
+				</div>
+			</div>
+			<div class="set_pos">
+				<div class="func">
+					<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+					<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="link">
+				<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+				<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+				<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+				<!-- <div class="set_pos"><em class="flag out">SOLD OUT</em></div> -->
+				<div class="price tc_3">
+					<span class="sale tc_poi">5%</span>
+					<strong class="now tc_3">51,800</strong>
+					<del class="origin tc_b">69,000</del>
+				</div>
+				<div class="flags clear">
+					<span class="flag tag tc_8">해외배송</span>
+					<span class="flag tag tc_8">베스트</span>
+					<span class="flag tag tc_8">쿠폰</span>
+				</div>
+			</div>
+			<div class="set_pos">
+				<div class="func">
+					<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+					<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="link">
+				<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+				<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+				<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+				<!-- <div class="set_pos"><em class="flag out">SOLD OUT</em></div> -->
+				<div class="price tc_3">
+					<span class="sale tc_poi">5%</span>
+					<strong class="now tc_3">51,800</strong>
+					<del class="origin tc_b">69,000</del>
+				</div>
+				<div class="flags clear">
+					<span class="flag tag tc_8">해외배송</span>
+					<span class="flag tag tc_8">베스트</span>
+					<span class="flag tag tc_8">쿠폰</span>
+				</div>
+			</div>
+			<div class="set_pos">
+				<div class="func">
+					<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+					<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="link">
+				<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+				<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+				<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+				<!-- <div class="set_pos"><em class="flag out">SOLD OUT</em></div> -->
+				<div class="price tc_3">
+					<span class="sale tc_poi">5%</span>
+					<strong class="now tc_3">51,800</strong>
+					<del class="origin tc_b">69,000</del>
+				</div>
+				<div class="flags clear">
+					<span class="flag tag tc_8">해외배송</span>
+					<span class="flag tag tc_8">베스트</span>
+					<span class="flag tag tc_8">쿠폰</span>
+				</div>
+			</div>
+			<div class="set_pos">
+				<div class="func">
+					<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+					<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="link">
+				<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+				<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+				<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+				<!-- <div class="set_pos"><em class="flag out">SOLD OUT</em></div> -->
+				<div class="price tc_3">
+					<span class="sale tc_poi">5%</span>
+					<strong class="now tc_3">51,800</strong>
+					<del class="origin tc_b">69,000</del>
+				</div>
+				<div class="flags clear">
+					<span class="flag tag tc_8">해외배송</span>
+					<span class="flag tag tc_8">베스트</span>
+					<span class="flag tag tc_8">쿠폰</span>
+				</div>
+			</div>
+			<div class="set_pos">
+				<div class="func">
+					<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+					<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="link">
+				<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+				<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+				<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+				<!-- <div class="set_pos"><em class="flag out">SOLD OUT</em></div> -->
+				<div class="price tc_3">
+					<span class="sale tc_poi">5%</span>
+					<strong class="now tc_3">51,800</strong>
+					<del class="origin tc_b">69,000</del>
+				</div>
+				<div class="flags clear">
+					<span class="flag tag tc_8">해외배송</span>
+					<span class="flag tag tc_8">베스트</span>
+					<span class="flag tag tc_8">쿠폰</span>
+				</div>
+			</div>
+			<div class="set_pos">
+				<div class="func">
+					<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+					<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="link">
+				<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+				<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+				<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+				<!-- <div class="set_pos"><em class="flag out">SOLD OUT</em></div> -->
+				<div class="price tc_3">
+					<span class="sale tc_poi">5%</span>
+					<strong class="now tc_3">51,800</strong>
+					<del class="origin tc_b">69,000</del>
+				</div>
+				<div class="flags clear">
+					<span class="flag tag tc_8">해외배송</span>
+					<span class="flag tag tc_8">베스트</span>
+					<span class="flag tag tc_8">쿠폰</span>
+				</div>
+			</div>
+			<div class="set_pos">
+				<div class="func">
+					<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+					<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="link">
+				<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+				<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+				<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+				<!-- <div class="set_pos"><em class="flag out">SOLD OUT</em></div> -->
+				<div class="price tc_3">
+					<span class="sale tc_poi">5%</span>
+					<strong class="now tc_3">51,800</strong>
+					<del class="origin tc_b">69,000</del>
+				</div>
+				<div class="flags clear">
+					<span class="flag tag tc_8">해외배송</span>
+					<span class="flag tag tc_8">베스트</span>
+					<span class="flag tag tc_8">쿠폰</span>
+				</div>
+			</div>
+			<div class="set_pos">
+				<div class="func">
+					<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+					<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<hr>
+	<div class="pages">
+		<em class="link">1</em>
+		<a href="" class="link">2</a>
+		<a href="" class="link">3</a>
+		<a href="" class="link">4</a>
+		<a href="" class="link">5</a>
+		<a href="" class="link">6</a>
+		<a href="" class="link">7</a>
+		<a href="" class="link">8</a>
+		<a href="" class="link">9</a>
+		<a href="" class="link">10</a>
+		<a href="" class="link last">132</a>
+		<a href="" class="btn_arr prev spr_before disabled"><span class="s_out">이전</span></a>
+		<a href="" class="btn_arr next spr_before"><span class="s_out">다음</span></a>
+	</div>
+	<hr>
+	<h1 class="tit_page">페이지 타이틀 PAGE title</h1>
+	<h2 class="tit_h1">타이틀 H1</h2>
+	<h3 class="tit_h2">타이틀 H2</h3>
+	<h4 class="tit_h3">타이틀 H3</h4>
+	<hr>
+	<p class="tc_3">본문 - 컬러 #333 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz가나다라마바사아자차카타파하</p>
+	<p>본문 - 컬러 #555 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz가나다라마바사아자차카타파하</p>
+	<p class="tc_8">본문 - 컬러 #888 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz가나다라마바사아자차카타파하</p>
+	<p class="tc_b">본문 - 컬러 #bbb ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz가나다라마바사아자차카타파하</p>
+	<hr>
+	<p class="desc_sub tc_3">서브 본문 - 컬러 #333 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz가나다라마바사아자차카타파하</p>
+	<p class="desc_sub">서브 본문 - 컬러 #555 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz가나다라마바사아자차카타파하</p>
+	<p class="desc_sub tc_8">서브 본문 - 컬러 #888 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz가나다라마바사아자차카타파하</p>
+	<p class="desc_sub tc_b">서브 본문 - 컬러 #bbb ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz가나다라마바사아자차카타파하</p>
+	<hr>
+	<p class="desc_small tc_3">예외 - 컬러 #333 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz가나다라마바사아자차카타파하</p>
+	<p class="desc_small">예외 - 컬러 #555 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz가나다라마바사아자차카타파하</p>
+	<p class="desc_small tc_8">예외 - 컬러 #888 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz가나다라마바사아자차카타파하</p>
+	<p class="desc_small tc_b">예외 - 컬러 #bbb ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz가나다라마바사아자차카타파하</p>
+	<hr>
+	<p class="tc_err">애러 - 컬러 #f32323 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz가나다라마바사아자차카타파하</p>
+	<p class="tc_poi">포인트 - 컬러 #ff4e25 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz가나다라마바사아자차카타파하</p>
+	<hr>
+	<div>
+		<a href="" class="btn_link large">버튼</a>
+		<button type="button" class="btn_link dark large">버튼</button>
+		<a href="" class="btn_link large">버튼<br>두줄</a>
+		<button type="button" class="btn_link dark large">버튼<br>두줄</button>
+		<a href="" class="btn_link large light">버튼<br>라이트</a>
+		<button type="button" class="btn_link dark large light">버튼<br>라이트</button>
+	</div>
+	<hr>
+	<div>
+		<a href="" class="btn_link">버튼</a>
+		<button type="button" class="btn_link dark">버튼</button>
+		<a href="" class="btn_link fix">네글자만</a>
+		<button type="button" class="btn_link dark fix">네글자만</button>
+	</div>
+	<hr>
+	<div>
+		<a href="" class="btn_link small">버튼</a>
+		<button type="button" class="btn_link small">버튼</button>
+		<button type="button" class="btn_link small fix">네글자만</button>
+	</div>
+	<hr>
+	<div>
+		<a href="" class="text_link">수정하기</a>
+		<a href="" class="text_link">삭제하기</a>
+	</div>
+	<hr>
+	<div>
+		<button type="button" class="btn_share spr_before"><span class="s_out">공유하기</span></button>
+		<button type="button" class="btn_like spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count pos_center h tc_3">153</span></button>
+		<span class="white" style="background-color:#111;display:inline-block;"><button type="button" class="btn_like spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count pos_center h tc_3">153</span></button></span>
+		<button type="button" class="btn_like spr_before selected" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count pos_center h tc_3">153</span></button>
+		<a href="" class="btn_reply spr_before"><span class="s_out">댓글수 : </span><span class="count pos_center h tc_3">153</span></a>
+		<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+		<button type="button" class="btn_like small spr_before selected" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+		<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+		<button type="button" class="btn_like small black spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+		<a href="" class="btn_reply small black spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+		<button type="button" class="btn_arr prev spr_before"><span class="s_out">이전</span></button>
+		<button type="button" class="btn_arr next spr_before"><span class="s_out">다음</span></button>
+		<button type="button" class="btn_arr small prev spr_before"><span class="s_out">이전</span></button>
+		<button type="button" class="btn_arr small next spr_before"><span class="s_out">다음</span></button>
+		<button type="button" class="btn_arr prev spr_before" disabled><span class="s_out">이전</span></button><!-- 버튼 비활성화는 disabled 속성 추가 -->
+		<button type="button" class="btn_arr next spr_before" disabled><span class="s_out">다음</span></button>
+		<a href="" class="btn_arr prev spr_before disabled"><span class="s_out">이전</span></a><!-- a링크 비활성화는 class에 disabled 추가 -->
+		<a href="" class="btn_arr next spr_before disabled"><span class="s_out">다음</span></a>
+		<button type="button" class="btn_arr small prev spr_before light"><span class="s_out">이전</span></button><!-- 흐린 버튼은 class에 light 추가 -->
+		<button type="button" class="btn_arr small next spr_before light"><span class="s_out">다음</span></button>
+		<button type="button" class="btn_coupon spr_after tc_5">쿠폰받기</button>
+	</div>
+	<hr>
+	<div class="cont_h2">
+		<h3 class="tit_h2">패션 위워크 비즈니스 모델 IDEA<br>국내 온라인 패션 산업의 거대한 트렌드 변화의 흐름</h3>
+		<p class="desc">그동안 해당 분야에서 업무를 하면서 생각한 다양한 비즈니스 모델 아이디어를 공유하고자 한다. 이 글을 보는 누군가 이 비즈니스 모델에 대한 호기심이 생긴다면 좀 더 구체화해보거나 실행해서 멋진 창업으로 어이 지길 희망해본다. 추가적으로 궁금한 사항에 대해선 언제든 연락이 오면 흔쾌히 정보를 나눌 의향이 있다.</p>
+		<p class="desc">그동안 해당 분야에서 업무를 하면서 생각한 다양한 비즈니스 모델 아이디어를 공유하고자 한다. 이 글을 보는 누군가 이 비즈니스 모델에 대한 호기심이 생긴다면 좀 더 구체화해보거나 실행해서 멋진 창업으로 어이 지길 희망해본다. 추가적으로 궁금한 사항에 대해선 언제든 연락이 오면 흔쾌히 정보를 나눌 의향이 있다.</p>
+		<h3 class="tit_h2">패션 위워크 비즈니스 모델 IDEA<br>국내 온라인 패션 산업의 거대한 트렌드 변화의 흐름</h3>
+		<p class="desc">그동안 해당 분야에서 업무를 하면서 생각한 다양한 비즈니스 모델 아이디어를 공유하고자 한다. 이 글을 보는 누군가 이 비즈니스 모델에 대한 호기심이 생긴다면 좀 더 구체화해보거나 실행해서 멋진 창업으로 어이 지길 희망해본다. 추가적으로 궁금한 사항에 대해선 언제든 연락이 오면 흔쾌히 정보를 나눌 의향이 있다.</p>
+	</div>
+	<hr>
+	<div class="cont_h1h2">
+		<h2 class="tit_h1">FASHION 위 워크</h1>
+		<h3 class="tit_h2">패션 위워크 비즈니스 모델 IDEA<br>국내 온라인 패션 산업의 거대한 트렌드 변화의 흐름</h3>
+		<p class="desc">그동안 해당 분야에서 업무를 하면서 생각한 다양한 비즈니스 모델 아이디어를 공유하고자 한다. 이 글을 보는 누군가 이 비즈니스 모델에 대한 호기심이 생긴다면 좀 더 구체화해보거나 실행해서 멋진 창업으로 어이 지길 희망해본다. 추가적으로 궁금한 사항에 대해선 언제든 연락이 오면 흔쾌히 정보를 나눌 의향이 있다.</p>
+		<p class="desc">그동안 해당 분야에서 업무를 하면서 생각한 다양한 비즈니스 모델 아이디어를 공유하고자 한다. 이 글을 보는 누군가 이 비즈니스 모델에 대한 호기심이 생긴다면 좀 더 구체화해보거나 실행해서 멋진 창업으로 어이 지길 희망해본다. 추가적으로 궁금한 사항에 대해선 언제든 연락이 오면 흔쾌히 정보를 나눌 의향이 있다.</p>
+		<h2 class="tit_h1">FASHION 위 워크</h1>
+		<h3 class="tit_h2">패션 위워크 비즈니스 모델 IDEA<br>국내 온라인 패션 산업의 거대한 트렌드 변화의 흐름</h3>
+		<p class="desc">그동안 해당 분야에서 업무를 하면서 생각한 다양한 비즈니스 모델 아이디어를 공유하고자 한다. 이 글을 보는 누군가 이 비즈니스 모델에 대한 호기심이 생긴다면 좀 더 구체화해보거나 실행해서 멋진 창업으로 어이 지길 희망해본다. 추가적으로 궁금한 사항에 대해선 언제든 연락이 오면 흔쾌히 정보를 나눌 의향이 있다.</p>
+	</div>
+	<hr>
+	<div class="cont_h1h2h3">
+		<h2 class="tit_h1">FASHION 위 워크</h1>
+		<h3 class="tit_h2">패션 위워크 비즈니스 모델 IDEA<br>국내 온라인 패션 산업의 거대한 트렌드 변화의 흐름</h3>
+		<h4 class="tit_h3">새로운 TREND 변화</h4>
+		<p class="desc">그동안 해당 분야에서 업무를 하면서 생각한 다양한 비즈니스 모델 아이디어를 공유하고자 한다. 이 글을 보는 누군가 이 비즈니스 모델에 대한 호기심이 생긴다면 좀 더 구체화해보거나 실행해서 멋진 창업으로 어이 지길 희망해본다. 추가적으로 궁금한 사항에 대해선 언제든 연락이 오면 흔쾌히 정보를 나눌 의향이 있다.</p>
+		<p class="desc">그동안 해당 분야에서 업무를 하면서 생각한 다양한 비즈니스 모델 아이디어를 공유하고자 한다. 이 글을 보는 누군가 이 비즈니스 모델에 대한 호기심이 생긴다면 좀 더 구체화해보거나 실행해서 멋진 창업으로 어이 지길 희망해본다. 추가적으로 궁금한 사항에 대해선 언제든 연락이 오면 흔쾌히 정보를 나눌 의향이 있다.</p>
+		<h4 class="tit_h3">새로운 TREND 변화</h4>
+		<p class="desc">그동안 해당 분야에서 업무를 하면서 생각한 다양한 비즈니스 모델 아이디어를 공유하고자 한다. 이 글을 보는 누군가 이 비즈니스 모델에 대한 호기심이 생긴다면 좀 더 구체화해보거나 실행해서 멋진 창업으로 어이 지길 희망해본다. 추가적으로 궁금한 사항에 대해선 언제든 연락이 오면 흔쾌히 정보를 나눌 의향이 있다.</p>
+		<h2 class="tit_h1">FASHION 위 워크</h1>
+		<h3 class="tit_h2">패션 위워크 비즈니스 모델 IDEA<br>국내 온라인 패션 산업의 거대한 트렌드 변화의 흐름</h3>
+		<h4 class="tit_h3">새로운 TREND 변화</h4>
+		<p class="desc">그동안 해당 분야에서 업무를 하면서 생각한 다양한 비즈니스 모델 아이디어를 공유하고자 한다. 이 글을 보는 누군가 이 비즈니스 모델에 대한 호기심이 생긴다면 좀 더 구체화해보거나 실행해서 멋진 창업으로 어이 지길 희망해본다. 추가적으로 궁금한 사항에 대해선 언제든 연락이 오면 흔쾌히 정보를 나눌 의향이 있다.</p>
+		<p class="desc">그동안 해당 분야에서 업무를 하면서 생각한 다양한 비즈니스 모델 아이디어를 공유하고자 한다. 이 글을 보는 누군가 이 비즈니스 모델에 대한 호기심이 생긴다면 좀 더 구체화해보거나 실행해서 멋진 창업으로 어이 지길 희망해본다. 추가적으로 궁금한 사항에 대해선 언제든 연락이 오면 흔쾌히 정보를 나눌 의향이 있다.</p>
+	</div>
+	<script src="./js/common.js"></script>
+	<script>
+		//openLayer(window.event,'#tempLayer1');//바로 레이어 팝업을 여는 경우
+		//openLayer(window.event,'#tempLayer4');//바로 레이어 팝업을 여는 경우
+		//showAlert('tempLayer4','입력하신 아이디 혹은 비밀번호가 올바르지 않습니다.',0,'alertCallback'); //알럿열기
+		//showAlert('tempLayer5','복사되었습니다.',1,'alertCallback2'); //알럿열기
+		function likeCallback(e){//좋아요 콜백
+			console.log('this는 좋아요 버튼',this);
+		};
+		function alertCallback(btnCancel,btnConfirm,id){//팝업 콜백 함수
+			btnCancel.off('click');//취소 버튼에 닫기 기능만 있을 경우엔 필요 없음, 수동으로 다른 기능을 넣을 때는 기존의 클릭 이벤트를 제거.
+			btnCancel.on('click',function(e){
+				closeLayer(id)//닫기 버튼에 닫기 기능 추가
+			});
+			btnConfirm.on('click',function(e){
+				closeLayer(id)//확인 버튼에 닫기 기능 추가
+			});
+		}
+		function alertCallback2(btnCancel,btnConfirm,id){//팝업 콜백 함수/ 취소 버튼이 없는 경우에도 btnCancel은 코드에 포함되어야 함
+			btnConfirm.on('click',function(e){
+				closeLayer(id)//확인 버튼에 닫기 기능 추가
+			});
+		}
+	</script>
+</body>
+</html>

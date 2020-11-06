@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>비밀번호 재설정</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- slick slider -->
+        <link rel="stylesheet" href="../assets/lib/slick/slick.css">
+        <link rel="stylesheet" href="../assets/css/style.css?v=1.0.6">
+
+        <script src="../assets/lib/jquery-2.2.4.min.js"></script>
+
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        
+        <div class="mo-wrap white">
+            <div class="page-header white no_border">
+                <div class="sz-wrap">
+                    <button type="button" class="back-btn"></button>
+                </div>
+            </div>
+            
+            <div id="container">
+        
+                <div class="member-container">
+                    <ul class="border_tab-list white clearfix">
+                        <li><a href="../member/id_find.html" class="bt-btn big-font">아이디 찾기</a></li>
+                        <li class="active"><a href="../member/pw_find.html" class="bt-btn big-font">비밀번호 찾기</a></li>
+                    </ul>
+            
+                    <div class="member-wrap">
+                        <p class="id_find-text margin_b-25">
+                            본인 확인이 완료되었습니다.
+                            <br>
+                            신규 비밀번호를 설정해 주세요.
+                        </p>
+                        
+                        <form action="">
+                            <p class="input-box">
+                                <input type="text" class="text-input margin_b-5" placeholder="영문 또는 숫자 조합 6~15자 이내로 입력해 주세요.">
+                                <input type="text" class="text-input" placeholder="비밀번호를 다시 한번 입력해 주세요.">
+                                <!-- 에러 메시지 -->
+                                <span class="error-msg">
+                                    비밀번호가 일치하지 않습니다.
+                                </span>
+                            </p>
+            
+                            <button type="submit" class="large-btn black-btn">비밀번호 변경</button>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- slick slider -->
+        <script src="../assets/lib/slick/slick.min.js"></script>
+        <script src="../assets/scripts/main.js?v=1.0.6"></script>
+    </body>
+</html>
