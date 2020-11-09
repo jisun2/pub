@@ -119,9 +119,7 @@ button,html,input,textarea {font-family: proxima-nova,'Noto Sans KR'!important;f
 .slick-track:after {clear: both;}
 .slick-loading .slick-track {visibility: hidden;}
 .slick-slide {display: none;float: left;height: 100%; min-height: 1px;}
-[dir='rtl'] .slick-slide{
-    float: right;
-}
+[dir='rtl'] .slick-slide{float: right}
 .slick-slide img {display: block;}
 .slick-slide.slick-loading img {display: none;}
 .slick-slide.dragging img { pointer-events: none;}
@@ -165,28 +163,8 @@ body.scrollOff {height: 100%; min-height: 100%; overflow: hidden!important; -ms-
 }
 
 /* 공통 팝업 close btn */
-.popup_close-btn {
-  position: fixed;
-  left: 50%;
-  bottom: 30px;
-  width: 40px;
-  height: 40px;
-  background: url(../../common/images/ico/popup_close-icon.png) center center/cover no-repeat;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  z-index: 100;
-}
-
-
-/* .margin_b-5 {margin-bottom: 5px}
-.margin_b-10 {margin-bottom: 10px}
-.margin_b-15 {margin-bottom: 15px}
-.margin_b-20 {margin-bottom: 20px}
-.margin_b-25 {margin-bottom: 25px}
-.margin_b-40 {margin-bottom: 25px} */
-/* .page-header {padding: 14px 0 18px;background-color: #111; border-bottom: 1px solid #2a2a2a} */
-/* .page-header.main {padding: 16px 1px 8px} */
+.popup_close-btn {position: fixed; left: 50%; bottom: 30px; width: 40px;height: 40px; background: url(../../common/images/ico/popup_close-icon.png) center center/cover no-repeat;
+  -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); z-index: 100;}
 .page-header.search {padding: 8px 0 0}
 .page-header .just_left::after {content: ''; display: block; clear: both}
 .page-header .back-btn {float:left; margin:14px 25px 18px 2px}
@@ -202,101 +180,24 @@ body.scrollOff {height: 100%; min-height: 100%; overflow: hidden!important; -ms-
 [class$="-btn"] {display: inline-block; text-align: center}
 .share-btn { background: url(../../common/images/ico/share-icon.png) center center/auto no-repeat; background-size: 17px 17px}
 .search_gray-btn {
-  display: block;
-  width: 15px;
-  height: 15px;
-  padding: 0;
-  background: url(../../common/images/ico/search_gray-icon.png) center center/cover no-repeat;
-  text-indent: -9999px;
-  overflow: hidden
-}
-.close_gray-btn {
-  width: 10px;
-  height: 10px;
-  background: url(../../common/images/ico/close_gray-icon.png) center center/cover no-repeat
-}
-.like_toggle-btn {
-  width: 17px;
-  height: 15px;
-  background: url(../../common/images/ico/like_toggle-icon.png) center center/cover no-repeat
-}
-.pop_close-btn {
-  width: 30px;
-  height: 30px;
-  background: url(../../common/images/ico/pop_close-btn.png) center center/cover no-repeat
-}
-.delete-btn {
-  width: 15px;
-  height: 15px;
-  background: url(../../common/images/ico/delete-icon.png) center center/cover no-repeat
-}
-.item_like-btn {
-  width: 30px;
-  height: 30px;
-  background: url(../../common/images/ico/item_like-icon.png) center center/cover no-repeat
-}
-.item_like-btn.active {
-  background: url(../../common/images/ico/item_like_active-icon.png) center center/cover no-repeat
-}
-.search_clear-btn {
-  width: 15px;
-  height: 15px;
-  padding: 0;
-  background: url(../../common/images/ico/delete_gray-icon.png) center center/cover no-repeat
-}
-.darkgray-btn {
-  color: #fff;
-  background-color: #2a2a2a;
-  border: 1px solid #2a2a2a
-}
-.gray-btn {
-  color: #fff;
-  background-color: #5d5e6a;
-  border: 1px solid #5d5e6a
-}
-.medium-btn {
-  width: 100%;
-  height: 45px;
-  line-height: 43px;
-  font-size: 13px;
-  font-weight: 500
-}
-.large-btn {
-  width: 100%;
-  height: 55px;
-  line-height: 53px;
-  font-size: 18px;
-  font-weight: 500
-}
-.stop-btn {
-  background-color: #b6b7bf;
-  border: 1px solid #b6b7bf;
-  color: #e5e6f0
-}
-.text-btn {
-  color: #ababab;
-  background-color: transparent;
-  font-size: 12px
-}
-.white-btn {
-  color: #444;
-  background-color: #fff;
-  border: 1px solid #444
-}
-.black-btn {
-  color: #fff;
-  background-color: #000;
-  border: 1px solid #000
-}
-.popup-wrap {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 100
-}
+  display: block; width: 15px; height: 15px; padding: 0; background: url(../../common/images/ico/search_gray-icon.png) center center/cover no-repeat;
+  text-indent: -9999px; overflow: hidden}
+.close_gray-btn {width: 10px; height: 10px; background: url(../../common/images/ico/close_gray-icon.png) center center/cover no-repeat}
+.like_toggle-btn { width: 17px; height: 15px; background: url(../../common/images/ico/like_toggle-icon.png) center center/cover no-repeat}
+.pop_close-btn { width: 30px;height: 30px; background: url(../../common/images/ico/pop_close-btn.png) center center/cover no-repeat}
+.delete-btn { width: 15px; height: 15px; background: url(../../common/images/ico/delete-icon.png) center center/cover no-repeat}
+.item_like-btn { width: 30px; height: 30px; background: url(../../common/images/ico/item_like-icon.png) center center/cover no-repeat}
+.item_like-btn.active {background: url(../../common/images/ico/item_like_active-icon.png) center center/cover no-repeat}
+.search_clear-btn {width: 15px; height: 15px; padding: 0; background: url(../../common/images/ico/delete_gray-icon.png) center center/cover no-repeat}
+.darkgray-btn { color: #fff; background-color: #2a2a2a; border: 1px solid #2a2a2a}
+.gray-btn {color: #fff; background-color: #5d5e6a; border: 1px solid #5d5e6a}
+.medium-btn { width: 100%; height: 45px; line-height: 43px; font-size: 13px; font-weight: 500}
+.large-btn {width: 100%; height: 55px; line-height: 53px; font-size: 18px; font-weight: 500}
+.stop-btn { background-color: #b6b7bf; border: 1px solid #b6b7bf; color: #e5e6f0}
+.text-btn {color: #ababab; background-color: transparent; font-size: 12px}
+.white-btn { color: #444; background-color: #fff; border: 1px solid #444}
+.black-btn { color: #fff; background-color: #000; border: 1px solid #000}
+.popup-wrap {display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 100}
 .popup-layer {
   display: block;
   position: absolute;
@@ -3910,7 +3811,7 @@ body.scrollOff {height: 100%; min-height: 100%; overflow: hidden!important; -ms-
 .pl_fc-box .just_right {
   text-align: right
 }
-.cart-section {
+/* .cart-section {
   border-top: 1px solid #d0d0d0
 }
 .cart-wrap {
@@ -3924,7 +3825,7 @@ body.scrollOff {height: 100%; min-height: 100%; overflow: hidden!important; -ms-
   padding: 12px 17px;
   border-bottom: 1px solid #e5e5e5
 }
-/* .cart-top::after {
+.cart-top::after {
   content: '';
   display: block;
   clear: both
@@ -4462,7 +4363,7 @@ body.scrollOff {height: 100%; min-height: 100%; overflow: hidden!important; -ms-
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   cursor: pointer
-} */
+}
 .cart_none-wrap {
   background-color: #f9f9f9;
   min-height: calc(100vh - 67px)
@@ -4480,6 +4381,8 @@ body.scrollOff {height: 100%; min-height: 100%; overflow: hidden!important; -ms-
   letter-spacing: -1.76px;
   text-align: center
 }
+*/
+
 /* 쇼핑백에 담긴 상품 없을 때 버튼 */
 /* .cart_none-wrap .cnw-btn {
   display: inline-block;
@@ -4642,9 +4545,9 @@ input[type=text].text-input.phone-last {
     display: block;
     clear: both
   }
-  .cart_nav-wrap {
+  /* .cart_nav-wrap {
     display: none
-  }
+  } */
   .cart_progress-wrap {
     display: block;
     padding: 90px 0 85px;
@@ -4701,6 +4604,7 @@ input[type=text].text-input.phone-last {
     margin: 0 13px 0 19px;
     vertical-align: -1px
   }
+    /*
   .cart-wrap:first-child {
     border-top: 7px solid #e5e5e5
   }
@@ -4726,10 +4630,10 @@ input[type=text].text-input.phone-last {
     margin-left: 10px;
     font-size: 13px
   }
-  /* .cart-btm {
+ .cart-btm {
     padding: 40px 20px
   } */
-  .cart-title-check .sz-custom_text {
+  /* .cart-title-check .sz-custom_text {
     height: 20px;
     line-height: 20px;
     margin-left: 14px;
@@ -4847,10 +4751,10 @@ input[type=text].text-input.phone-last {
     max-width: 1280px;
     padding: 0 10px;
     margin: 0 auto
-  }
-  .mobile-coupon {
+  } */
+  /* .mobile-coupon {
     display: none
-  }
+  } */
   .coupon_apply-target {
     height: 20px;
     line-height: 20px;
@@ -5125,7 +5029,7 @@ input[type=text].text-input.phone-last {
   .cart_none_total-wrap {
     display: block
   }
-  .cart_none-wrap {
+  /* .cart_none-wrap {
     position: relative;
     min-height: inherit;
     height: 450px
@@ -5150,7 +5054,7 @@ input[type=text].text-input.phone-last {
     color: #555;
     border: 1px solid #555;
     font-size: 18px
-  }
+  } */
   .popup-content {
     position: absolute;
     position: absolute;
@@ -5808,7 +5712,6 @@ footer .outlink a:after {width:15px;height:15px;}
 footer .outlink li {width:16.6%;display:block;flex:1; float:left;}
 footer .outlink li:last-child {text-align:right}
 
-
 footer .ispr {background:url(../../common/images/ico/spr.png); background-size:300px 300px;}
 .sort a, .sort button, .tc_8 {font-style: normal;color:#888}
 
@@ -5816,14 +5719,14 @@ footer .outlink i {display: inline-block;background-repeat: no-repeat;vertical-a
 footer .outlink i.fb {margin:5px 10px; width:10px; height:20px;background-position: -114px -201px}
 footer .outlink i.ig {margin: 5px 5px; width: 20px; height: 20px; background-position: -128px -202px}
 footer .outlink i.pin {margin: 5px 5px; width: 20px; height: 20px; background-position: -149px -202px}
-footer .outlink i.blog {margin: 4px 0px;width: 28px; height: 20px; background-position: -170px -198px;}
+footer .outlink i.blog {margin:6px 0px;width: 28px; height: 20px; background-position: -170px -199px;}
 footer .outlink i.yt {margin: 8px 5px;width: 20px;height: 14px;background-position: -202px -202px}
 /* footer .outlink .ig:after {background-position:-10px -50px;}
 footer .outlink .fb:after {display:block; height:15px;width:8px;background-position:0 0px;}
 footer .outlink i.blog:after {background-position:-45px -53px;width:20px;height:9px;}
 footer .outlink i.yt:after {background-position:-70px -51px;width:17px;height:13px;} */
 footer .footer_top .on_m::after {display: none}
-footer .footer_top .on_m {margin:0}
+footer .footer_top li.on_m {margin-right:0}
 input::-ms-clear{display: none}
 /* footer .outlink .pin:after {background-position: -20px -20px;width: 12px;} */
 
@@ -5835,10 +5738,14 @@ footer .inlink li:after {position:absolute;top:50%;right:-7px;width:1px;height:1
 footer .inlink li:last-child{margin-right:0;}
 footer .inlink li:last-child:after {display:none;}
 footer .footer_top li {margin-right:18px;}
+footer .footer_top li.on_m {margin-right:0}
 }
+
 @media screen and (max-width: 321px) {
     .coupon_info-box .apply-btn {bottom: 12px;}
+
 }
+
 @media screen and (min-width: 980px) {
   .paymt_pc_wrap {width:750px; margin:0 auto;}
   #pop_card_benefit .popup-content .page-header,
@@ -5848,17 +5755,8 @@ footer .footer_top li {margin-right:18px;}
   #pop_card_benefit .popup_close-btn,
   #pop_paymt_guide .popup_close-btn {display: block}
   .terms-popup {width: 100vw;height: 100vh; background-color: #fff}
-  .terms-popup .terms-content {
-    margin: 0 auto;
-    width: 100vw;
-    padding: 25px 20px 0;
-    height: calc(100% - 10%);
-    overflow: auto;
-  }
-  .popup-content .coupon-list {
-    height:600px;
-}
-  .popup_close-btn {
-      display: none
-  }
+  .terms-popup .terms-content {margin: 0 auto; width: 100vw; padding: 25px 20px 0;
+    height: calc(100% - 10%); overflow: auto;}
+  .popup-content .coupon-list {height:600px;}
+  .popup_close-btn {display: none}
 }
