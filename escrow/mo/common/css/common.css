@@ -1022,15 +1022,15 @@ body.scrollOff {height: 100%; min-height: 100%; overflow: hidden!important; -ms-
 }
 
 /* 공통 상단 아이콘 S */
-.ph_icon-list li {float: left;}
+.ph_icon-list li {float:left;position:relative;}
 .ph_icon-list li a {display:block; margin: 14px 11px 18px 11px}
 .ph_icon-list li a.search {margin-right:0}
 .ph_icon-list .ph-btn {display: block}
 .ph_icon-list .ph-btn.home {width: 22px;height: 22px;background: url(../../common/images/ico/home-icon.png) center center/cover no-repeat}
 .ph_icon-list .ph-btn.cart {width: 22px;height: 22px;background: url(../../common/images/ico/cart-icon.png) center center/cover no-repeat}
 .ph_icon-list .ph-btn.search {width: 22px;height: 22px;background: url(../../common/images/ico/search-icon.png) center center/cover no-repeat}
-.site_header .logo.sub .sub_logo_area_set .cart_num { display: inline-block; position: absolute; right: -8px; top: -4px; min-width: 20px;height: 20px; padding: 0 4px;border-radius: 10px 10px;text-align: center; background: #ff4e25;-webkit-border-radius: 10px 10px; -moz-border-radius: 10px 10px;-ms-border-radius: 10px 10px; -o-border-radius: 10px 10px; font-size: 11px; color: #fff;}
-
+#cartCntMobile.cart_num { display: inline-block; position: absolute; right: -8px; top: -4px; min-width: 20px;height: 20px; padding: 0 4px;border-radius: 10px 10px;text-align: center; background: #ff4e25;-webkit-border-radius: 10px 10px; -moz-border-radius: 10px 10px;-ms-border-radius: 10px 10px; -o-border-radius: 10px 10px; font-size: 11px; color: #fff;}
+.ph_icon-list #cartCntMobile.cart_num {padding:4px;top:5px; right:0px}
 
 /* 공통 상단 아이콘 E */
 .my_info-wrap {
