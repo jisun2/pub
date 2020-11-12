@@ -252,6 +252,6 @@ html {font-size: 14px;line-height: 22px;color: #555;}
 .comp_info .btns .btn_link + .btn_link{margin-top:10px;}
 .comp_info .btn {text-align: center;}
 .comp_info .btn a { display:inline-block;width:100%; max-width:300px;border: 1px solid #111;height: 55px;color: #333; text-align: center;padding: 15px 0;font-size: 16px}
-.comp_info a.btn_bk {margin-top:10px; color:#fff;font-weight:400; background-color: #111;}
+.comp_info a.btn_bk {margin-top:10px; color:#fff;font-weight:400; background-color: #111}
 .bg_def, .bg_f7, .wrap_board .item.view { background-color: #f7f7f7;}
 .input_radio label:after, .input_radio label:before, .input_radio_check label:after {border-radius: 49%;}

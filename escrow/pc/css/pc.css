@@ -2347,6 +2347,7 @@ ol.privacy_list>li:nth-child(10)>.tit:before,
 .ie .my_order_payment .info dd{line-height:18px;height:18px;}
 .ie .my_order_payment .info dd:nth-of-type(1){line-height:22px;}
 
+
 @media all and (-webkit-min-device-pixel-ratio:1.5){
 	.spr,
 	.spr_after:after,
