@@ -243,7 +243,7 @@ html {font-size: 14px;line-height: 22px;color: #555;}
 .comp_info{padding-bottom:60px;border-bottom:8px solid #f0f0f0;color:#111;}
 .comp_info .desc {padding:52px 65px 25px;line-height:20px;text-align:center;}
 .comp_info .desc strong {display:block;font-size:18px;font-weight:700;line-height:36px;margin-bottom:7px;}
-.comp_info .detail{display: inline-block;min-width: 320px; margin:0 16px 30px;padding:27px 30px 25px}
+.comp_info .detail{/*display: inline-block;*/min-width: 320px; margin:0 16px 30px;padding:27px 30px 25px}
 .comp_info .detail dt{float:left;width:100px;font-size:13px;line-height:21px;}
 .comp_info .detail dd{float:right;width:calc(100% - 100px);text-align:right;font-size:14px;line-height:21px;}
 .comp_info .detail .line2{border-top:1px solid #e5e5e5;padding-top:17px;margin-top:15px;}

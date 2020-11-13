@@ -2663,6 +2663,16 @@ body.scrollOff {height: 100%; min-height: 100%; overflow: hidden!important; -ms-
 .reviewer .review_box li {border-bottom: 1px solid #f5f5f5}
 .reviewer .review_area .star_rating_s .star_wrap .star.on, .reviewer .review_area .star_rating_s .star_wrap .star.off {float:left; width:15px; height:15px}
 
+/* 더보기 */
+}
+.reviewer .mobile_review_list .product_select_list_moreview {
+    margin-bottom: 0;
+}
+.product_select_list_moreview {
+    height: 55px;
+    line-height: 55px;
+    margin-top: 25px;
+    margin-bottom: 35px;}
 
 
 @media all and (max-width:320px){
