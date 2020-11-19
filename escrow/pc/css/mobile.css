@@ -2631,37 +2631,6 @@ body.scrollOff {height: 100%; min-height: 100%; overflow: hidden!important; -ms-
 .f-left {float: left}
 .f-right {float: right}
 
-/* 별점 상품평 */
-.reviewer .button_review_write{width:100%; height:55px; line-height:55px; background: #000; margin:0 0 40px;}
-.reviewer .button_review_write a{display:block; width:100%; height:100%; text-align: center;}
-.reviewer .button_review_write span{color:#fff; font-size:16px; font-weight: 600;}
-.reviewer .list_selector{width:100%; line-height: 1; padding-bottom:15px; border-bottom:1px solid #e5e5e5}
-.reviewer .list_selector a{display:inline-block}
-.reviewer .list_selector span{font-size: 16px; color:#bbb;}
-.reviewer .list_selector ._selected span{font-weight: bold; color:#333}
-.reviewer .list_selector a + a{margin-left:25px;}
-.reviewer .list li{padding:25px 0;}
-
-.reviewer .review_top_area {margin: 20px auto 40px; display: block;width:100%;}
-.reviewer .review_top_area .star {float:left;}
-.reviewer .star_wrap {margin-top:4px; display:inline-block;}
-.reviewer .star_rating_s .star_wrap {float:left;}
-.reviewer .review_data_header {position:relative;}
-.reviewer .review_box span {margin-left:5px;float:left;font-size: 12px; color: #888;}
-.reviewer .review_data_header .review_id {position: absolute; right:0; color:#333}
-.reviewer .review_area .star_rating_s {display: inline-block;}
-.reviewer .star_wrap .star.on, .reviewer .star_wrap .star.off {float:left; width:35px; height:35px;}
-.reviewer .star_wrap .star.on {background: url(../img/star_on.png) left top no-repeat; background-size:cover}
-.reviewer .star_wrap .star.off {background: url(../img/star_off.png) left top no-repeat;background-size: cover}
-.reviewer .star_wrap .star {float:left; margin:0 2px; width:10px; height:10px}
-.reviewer .star_rating {margin:0 auto; text-align:center}
-.reviewer .review_top_area strong { display: block; text-align: center; font-size: 16px;font-weight: 500; color: #333; line-height: 1; margin-bottom: 15px;}
-.site_main.view .reviewer li {position: relative; padding:20px 0}
-.reviewer .list li { padding: 25px 0; border-bottom: 1px solid #e5e5e5;}
-.reviewer .list .review_date {float: left;height: 15px; margin-left: 10px;}
-.reviewer .review_area, .reviewer .review_box {width:100%}
-.reviewer .review_box li {border-bottom: 1px solid #f5f5f5}
-.reviewer .review_area .star_rating_s .star_wrap .star.on, .reviewer .review_area .star_rating_s .star_wrap .star.off {float:left; width:15px; height:15px}
 
 
 

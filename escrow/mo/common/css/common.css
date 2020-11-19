@@ -544,10 +544,20 @@ body.scrollOff {height: 100%; min-height: 100%; overflow: hidden!important; -ms-
   background-color: #000;
   z-index: 100
 }
+.s_out {
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+    text-indent: 10rem;
+    white-space: nowrap;
+    color: rgba(0,0,0,0);
+    border: 0;
+    padding: 0;
+}
 
-
-
-/* 상품 상세 , 배송지 변경 팝업 탭 공통 */
+/* 배송지 변경 팝업 탭 공통 */
 .border_tab-list li {float: left;text-align: center}
 .border_tab-list.search_active { position: fixed; top: 0; left: 0; width: 100%}
 .border_tab-list.white .bt-btn { background-color: #fff; border-bottom: 1px solid #d0d0d0}
@@ -4429,6 +4439,8 @@ input[type=text].text-input.phone-last {
   border: 1px solid #000;
   border-top: none
 }
+
+
 @media screen and (min-width:980px) {
   .slide-wrap {
     padding-top: 20px
