@@ -21,19 +21,25 @@
 
 .product {position:relative; display:inline-block; width:100%; height:500px}
 .product ul.tab {overflow: hidden; width:100%; list-style:none;border:0 none}
-.product ul.tab>li {overflow: hidden; text-align:center; background-color:#fff; height:auto}
-.product ul.tab>li:after {content:'';display:block;left:0px; width:90%; height:2px; border:0 none;}
-.product ul.tab>li>a {display:block; padding:20px 15px; border-bottom: 1px solid #333; font-size:14px; line-height:10px; text-align:center;text-decoration: none;color:#333}
-.product ul.tab>li>a.active { top:0; left:0; font-weight: bold; color:#ff4e25; border-bottom: 2px solid #ff4e25;}
-.product ul.tab div.tab_inr {margin-bottom:100px; height:1000px; overflow:hidden;clear:both; display:block; padding:20px;position:absolute; z-index: 0; top:53px; left:0; width:100%;border:none}
-.product ul.tab div.tab_inr.QA {padding:0;}
+.product ul.tab>li {overflow: hidden; text-align:center; background-color:#fff; height:auto; border-bottom: 1px solid #333;list-style: none;}
+.product ul.tab>li::after {content:'';display:block; width:100%; height:2px; border:0 none;}
+.product ul.tab>li>a {display:block; padding:20px 15px;font-size:14px; line-height:10px; text-align:center;text-decoration: none;color:#333; border-bottom: 1px solid #333;}
+.product ul.tab>li.active a {top:0; left:0; color:#ff4e25; border-bottom: 2px solid #ff4e25;}
+.product div.tab_inr:nth-child(1) {background:yellowgreen; }
+.product div.tab_inr:nth-child(2) {background:pink }
+.product div.tab_inr:nth-child(3) {background:#f9f9f9 }
+.product div.tab_inr {margin-bottom:100px; overflow:hidden;clear:both; display:block; padding:20px;position:absolute; z-index: 0; top:53px; left:0; width:100%;border:none}
+.product div.tab_inr.QA {padding:0;}
 .product .product_lst li {width:100%; text-align: left;}
 .product .product_lst > li a {display: inline-block; position:relative; width:70%; text-overflow:ellipsis;white-space: nowrap;overflow:hidden;font-size: 0.95rem;}
 .product .product_lst >li .date { display: block;float: right;color: #999;font-size: .875rem;}
 
+.product .overh {height:300px}
+
+
 /* 작성 버튼 */
-.product ul.tab div.tab_inr.QA .pd10 {padding:20px;}
-.tab_inr .btn_write.dark {padding:20px 0; display: inline-block; width:100%;color:#fff; background-color: #111}
+.product ul.tab div.tab_inr.qna .pd10 {padding:20px;}
+.tab_inr .btn_write.dark {padding:20px 0; text-align: center; display: inline-block; width:100%;color:#fff; background-color: #111}
 /* .large[class*=btn_] { width: calc(100% - 32px);display: -ms-flexbox; display: flex; margin:auto}
 .banner_top.bg_f .btn_close:after, .banner_top.bg_f .btn_close:before, .bg_1, .wrap_layer>.btn_close.bg_1, .dark[class*=btn_], .flag.new { background-color: #111;}
 .dark[class*=btn_], .lc_1 {border-color: #111;} */
@@ -41,12 +47,6 @@
 /* .tc_b [class^=btn_]{color:#bbb} */
 /* .dark[class*=btn_], .flag.new, .lnb.white .list_lnb, .lnb.white .list_lnb .dep2, .lnb.white .tit_lnb, .out, .tc_f {color: #fff;} */
 a[class*=btn_] {-ms-flex-align: center; align-items: center;}
-
-
-.product ul.tab li:nth-child(1) div.tab_inr { background:yellowgreen; }
-.product ul.tab li:nth-child(2) div.tab_inr { background:pink }
-.product ul.tab li:nth-child(3) div.tab_inr { background:#fff }
-
 
 
 /* 상세 탭 별점 상품평  */
@@ -69,21 +69,23 @@ a[class*=btn_] {-ms-flex-align: center; align-items: center;}
 .reviewer .star_rating_s .star_wrap {float:left;}
 .reviewer .review_data_header {position:relative; width:100%;}
 .reviewer .review_box span {margin:5px 0 0 10px; float:left; font-size: 12px; color: #888;}
-.reviewer .review_box .ovr_x {width:90%;overflow-x:scroll;}
+.reviewer .review_box .ovr_x {width:95%;overflow-x:scroll;}
 .reviewer .review_box .re_img {width:400px; overflow-x:scroll;}
 .reviewer .review_box .re_img img {float:left; margin:10px 0 0 2px; width:77px; height:77px}
 .reviewer .review_data_header .review_id {position: absolute; right:0; color:#333}
 .reviewer .review_area .star_rating_s {float:left; display:block;}
-.reviewer .star_wrap .star.on, .reviewer .star_wrap .star.off {float:left; width:35px; height:35px;}
+.reviewer .star_wrap .star.on, .reviewer .star_wrap .star.off, .reviewer .star_wrap .star.half
+{float:left; width:35px; height:35px;}
 .reviewer .star_wrap .star.on {background: url(../../../common/images/ico/star_on.png) left top no-repeat; background-size:cover}
 .reviewer .star_wrap .star.off {background: url(../../../common/images/ico/star_off.png) left top no-repeat;background-size: cover}
+.reviewer .star_wrap .star.half {background: url(../../../common/images/ico/star_half.png) left top no-repeat;background-size: cover}
 .reviewer .star_wrap .star {float:left; margin:0 2px; width:10px; height:10px}
 .reviewer .star_rating {margin:0 auto; text-align:center}
 .site_main.view .reviewer li {position: relative; padding:20px 0}
 .reviewer .list li { padding: 25px 0; border-bottom: 1px solid #e5e5e5;}
 .reviewer .list .review_date {float: left;height: 15px; margin-left: 10px;}
 .reviewer .review_area, .reviewer .review_box {display: inline-block; width:100%}
-.reviewer .review_box li {padding:25px 0; width:100%; height: auto; border-bottom: 1px solid #f5f5f5}
+.reviewer .review_box li {display: inline-block; padding:25px 0; width:100%; height: auto; border-bottom: 1px solid #f5f5f5}
 .reviewer .review_area .star_rating_s .star_wrap .star.on, .reviewer .review_area .star_rating_s .star_wrap .star.off {float:left; width:15px; height:15px}
 .reviewer .product_option {float:left; width:100%}
 .reviewer .product_option p {margin-top:10px; float:left; font-size: 13px;color: #888;line-height: 1.4em;}
@@ -97,7 +99,7 @@ a[class*=btn_] {-ms-flex-align: center; align-items: center;}
 .input_text, .input_select {height: 45px;}
 .on_m {display: block;}
 .input_select {display: inline-block; vertical-align: top;position: relative;-webkit-box-sizing: border-box;-moz-box-sizing: border-box; box-sizing: border-box;background-color: #fff;}
-.input_select.event_sort_m {margin-left:10px; float:left; height:50px;}
+.input_select.event_sort_m {float:left; height:50px;}
 .input_select.event_sort_m select {background-color:#fff}
 .input_text, .input_select { height: 45px;}
 /* .input_select.event_sort_m:before {border-width: 4.5px 4.5px 0 4.5px; right: 8px;} */
@@ -114,7 +116,7 @@ a[class*=btn_] {-ms-flex-align: center; align-items: center;}
 
 
 /* 댓글 */
-.wrap_board{position:relative;}
+.wrap_board{margin-top:30px; position:relative;}
 .wrap_board .tit{display:none;}
 .wrap_board .group{text-align: left;width:100%;border-bottom:1px solid #e5e5e5;clear:both}
 .wrap_board .group + .pages{margin-top:30px}
