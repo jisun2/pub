@@ -670,7 +670,6 @@
                                     <a href="#" class="popup_close-btn-pc pop_close"></a>
                                 </div>
                             </div>
-
                             <div class="terms-content">
                                 <p class="coupon-text">
                                     고객님의 보유 쿠폰은 <span class="orange"><span>4</span>개</span> 입니다.
@@ -764,17 +763,17 @@
 
         <script type="text/javascript">
             // 컨텐츠 내용을 숨겨주세요!
-            var tabBtn = $("#tab-btn > ul > li"); //각각의 버튼을 변수에 저장
-            var tabCont = $("#tab-cont > div");  //각각의 컨텐츠를 변수에 저장
+            var tabBtn = $("#tab-btn > ul > li");
+            var tabCont = $("#tab-cont > div");
 
             tabCont.hide().eq(0).show();
 
             tabBtn.click(function(){
-            var target = $(this);        //버튼의 타켓(순서)을 변수에 저장
-            var index = target.index();  //버튼의 순서를 변수에 저장
+            var target = $(this);
+            var index = target.index();
             // alert(index);
-            tabBtn.removeClass("active");   //버튼의 클래스를 삭제
-            target.addClass("active");   //타켓의 클래스를 추가
+            tabBtn.removeClass("active");
+            target.addClass("active"); 
             tabCont.css("display","none");
             tabCont.eq(index).css("display","block");
             });
@@ -782,10 +781,6 @@
         </script>
 
         <script>
-            // $('.product .tab a.pro').eq(0).addClass('active').next().show().parent().siblings().find('a.pro').removeClass('active').next().hide();
-            //     $('a').on('click', function() {
-            // $(this).addClass('active').next().show().parent().siblings().find('a.pro').removeClass('active').next().hide();
-            // });
             $( document ).ready( function() {
                 $( '.Demore_btn' ).click( function() {
                     $( "#Demore" ).removeClass( "overh" )
